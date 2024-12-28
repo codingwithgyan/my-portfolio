@@ -1,0 +1,77 @@
+.home-main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    .home-container {
+        display: flex;
+        gap:1rem;
+        .portfolio-wrapper {
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+        .pic-main-wrapper {
+            height: 220px;
+            width: 220px;
+            border-radius: 100%;
+            border: 2px solid rgb(255, 255, 255);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .pic-wrapper {
+                height: 200px;
+                width: 200px;
+                border-radius: 100%;
+                overflow: hidden;
+            }
+            
+        }
+        .my-description {
+                background: #9747ff;
+                border-radius: 8px;
+                padding: .5rem .75rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap:8px;
+                cursor: pointer;
+                .description-text {
+                    font-weight: 500;
+                }
+                .external-icon-wrapper {
+                    height: 24px;
+                    img {
+                        height: 24px;
+                        width: 0px;
+                        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+                    }
+                }
+        }
+
+        .my-description:hover .external-icon-wrapper img{
+            width: 24px;
+            transition: all .6s;
+        }
+    }
+        .social-media-wrapper {
+            display: flex;
+            gap:8px;
+            align-items: center;
+            justify-content: center;
+            .icon {
+                cursor: pointer;
+            }
+        }
+    }
+    .box-wrapper {
+        width: 100%;
+        border: 1px solid #222426;
+        background: linear-gradient(153deg,hsla(0,0%,100%,.12) -65.62%,hsla(0,0%,100%,.04) 83.28%);
+        backdrop-filter: blur(25px);
+        padding: 16px 24px;
+        border-radius: 8px;
+    }
+}

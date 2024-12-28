@@ -1,0 +1,97 @@
+.navbar-main-container {
+    min-height: 80px;
+    width: 100%;
+    border: 1px solid #222426;
+    background: linear-gradient(153deg,hsla(0,0%,100%,.12) -65.62%,hsla(0,0%,100%,.04) 83.28%);
+    backdrop-filter: blur(25px);
+    padding: 16px 24px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo-main {
+        font-size: 32px;
+        font-weight: 600;
+        span {
+            color:#9747ff;
+        }
+    }
+    .navbar-content-main-wrapper {
+        display: flex;
+        align-items: center;
+        gap:32px;
+        .content-wrapper {
+            display: flex;
+            align-items: center;
+            gap:4px;
+            font-weight: 500;
+            .text {
+                font-size: 16px;
+            }
+            cursor: pointer;
+            .arrow {
+                height: 15px;
+                transform: rotateX(180deg);
+            }
+        }
+        .content-wrapper:hover {
+            transition: all .3s ease-in-out;
+            color: #9747ff;
+        }
+        .content-wrapper:hover .arrow {
+            transform: rotateX(0deg);
+            transition: all .3s ease-in-out;
+            color: #9747ff;
+        }
+    }
+
+    .lets-talk-wrapper {
+        height: 50px;
+        width: 50px;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #9747ff;
+        font-size: 28px;
+        font-weight: 900;
+        cursor: pointer;
+        overflow: hidden;
+        .arrow-main-wrapper {
+            height: 100%;
+            width: 100%;
+            display: block;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .inner-arrow-1 {
+                position: absolute;
+                bottom: -3px;
+                left: 7px;
+            }
+            .inner-arrow-2 {
+                position: absolute;
+                bottom: -40px;
+                left: -50px;
+            }
+           
+        }
+        .arrow-main-wrapper:hover .inner-arrow-1 {
+            position: absolute;
+            bottom: 40px;
+            left: 50px;
+            transition: all .8s;
+        }
+        .arrow-main-wrapper:hover .inner-arrow-2 {
+            position: absolute;
+            bottom: -3px;
+            left: 7px;
+            transition: all .8s;
+        }
+        
+    }
+    
+    
+}
