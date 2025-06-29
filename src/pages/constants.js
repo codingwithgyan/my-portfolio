@@ -5,6 +5,11 @@ export const NAVBAR_ITEM_LIST = [
         key: "HOME",
     },
     {
+        label: "About",
+        link: "#",
+        key: "ABOUT",
+    },
+    {
         label: "Skills",
         link: "#",
         key: "SKILLS",

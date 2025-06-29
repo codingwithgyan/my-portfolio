@@ -3,6 +3,8 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Home from './pages/Home/Home';
 import './App.css'
 import AnimatedCursor from 'react-animated-cursor';
+import About from './pages/About/About';
+import Skills from './pages/Skills/Skills';
 
 const theme = createTheme({
   typography: {
@@ -18,6 +20,8 @@ function App() {
      <CssBaseline />
      <AnimatedCursor color='221, 211, 211'/>
         <Home/>
+        <About/>
+        <Skills/>
     </ThemeProvider>
     </div>
   )

@@ -1,0 +1,31 @@
+.about-main-container {
+    width: 100%;
+    margin-top: 10vh;
+    border-radius: 20px;
+    border: 1px solid #222426;
+    background: rgba(34, 36, 38, .4);
+    padding: 60px 112px 60px 60px;
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+
+    .header-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap:2px;
+    }
+
+    .header-text {
+        font-family: 'Poppins';
+        font-size: 28px;
+        font-weight: 600;
+        color: white;
+    }
+    .header-description {
+        display: 'Poppins';
+        font-size: 14px;
+        font-weight: 300;
+        opacity: 0.7;
+        color: #ffffff;
+    }
+}

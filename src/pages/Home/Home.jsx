@@ -1,5 +1,6 @@
 import { Box, Button, Tooltip, Typography } from "@mui/material";
 import Marquee from "react-fast-marquee";
+import { motion } from "motion/react";
 import Navbar from "../../atoms/Navbar/Navbar";
 import "./Home.scss";
 import pic from "../../assets/images/pic.jpg";
@@ -13,6 +14,7 @@ import microsoft from "../../assets/images/microsoft.png";
 import oracle from "../../assets/images/oracle.png";
 import download from "../../assets/images/download.png";
 import { ABOUT } from "../constants";
+import { DefaultMotion } from "../../atoms/Motion/CustomMotion";
 const TooltipStyle = ({tooltip}) => {
     return <Box>
         {tooltip}
@@ -225,19 +227,29 @@ const Home = () => {
             <Navbar/>
             <Box className="home-container">
                 <Box width="100%" display="flex" flexDirection="column" gap="1rem">
-                    {renderPortfolioCard()}
-                    {renderSocialMedia()}
+                    <DefaultMotion style={{height:"100%"}}>{renderPortfolioCard()}</DefaultMotion>
+                    <DefaultMotion >{renderSocialMedia()}</DefaultMotion>
                 </Box>
                 <Box width="100%" display="flex" flexDirection="column" gap="1rem">
                     <Box width="100%" className="job-box">
-                        {renderJobTitle()}
-                        {renderCertification()}
+                        <DefaultMotion >
+                            {renderJobTitle()}
+                        </DefaultMotion>  
+                        <DefaultMotion >  
+                            {renderCertification()}
+                        </DefaultMotion>    
                     </Box>
+                    <DefaultMotion style={{height:"100%"}}>
                     {renderSkills()}
+                    </DefaultMotion>
                 </Box>
                 <Box className="resume-box">
+                <DefaultMotion style={{height:"100%"}}>
                     {renderResumePoster()}
+                </DefaultMotion>
+                <DefaultMotion style={{height:"100%"}}>    
                     {renderExperiencePoster()}
+                </DefaultMotion>
                 </Box>
               
             </Box>
