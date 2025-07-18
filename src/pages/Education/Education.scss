@@ -1,0 +1,31 @@
+.education-main-container {
+    width: 100%;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    .box-wrapper {
+        width: 100%;
+        background: rgba(34, 36, 38, .4);
+        padding: 60px 112px 60px 60px;
+        border: 1px solid #222426;
+        border-radius: 20px;
+    }
+    .header-text {
+            font-family: 'Poppins';
+            font-size: 28px;
+            font-weight: 600;
+            color: white;
+    }
+    .education-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap:1rem;
+        margin-top: 20px;
+        .education-item-wrapper {
+            padding: 60px 112px 60px 60px;
+            padding: 20px;
+            border-radius: 8px;
+        }
+    }
+}

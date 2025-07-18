@@ -7,6 +7,8 @@ import About from './pages/About/About';
 import Skills from './pages/Skills/Skills';
 import WorkExperience from './pages/WorkExperience/WorkExperience';
 import Projects from './pages/Projects/Projects';
+import Education from './pages/Education/Education';
+import Contact from './pages/Contact/Contact';
 
 const theme = createTheme({
   typography: {
@@ -26,6 +28,8 @@ function App() {
         <Skills/>
         <WorkExperience/>
         <Projects/>
+        <Education/>
+        <Contact/>
     </ThemeProvider>
     </div>
   )
