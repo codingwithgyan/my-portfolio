@@ -19,11 +19,11 @@ const TooltipStyle = ({tooltip}) => {
         {tooltip}
     </Box>
 }
-const SocialMedia = ({height, width, src, tooltipObj}) => {
+const SocialMedia = ({height, width, src, tooltipObj, onClick}) => {
     const {label, tooltip, link=null} = tooltipObj;
     return (
         <Tooltip title={<TooltipStyle tooltip={tooltip}/>} placement="bottom">
-            <Box height={height} className="icon">
+            <Box onClick={onClick} height={height} className="icon">
                 <img height={height} width={width} src={src}/>
             </Box>
         </Tooltip>
@@ -40,6 +40,21 @@ const IconWrapper = ({src}) => {
     )
 }
 const renderSocialMedia = () => {
+    const handlePhoneClick = () => {
+        window.open(`tel:${ABOUT.PHONE.link}`, "_blank");
+    }
+    const handleLinkedInClick = () => {
+        window.open(ABOUT.LINKEDIN.link, "_blank");
+    }
+    const handleMailClick = () => {
+        window.open(`mailto:${ABOUT.GMAIL.link}`, "_blank");
+    }
+    const handleTwitterClick = () => {
+        window.open(ABOUT.TWITTER.link, "_blank");
+    }
+    const handleGithubClick = () => {
+        window.open(ABOUT.GITHUB.link, "_blank");
+    }
     return (
         <Box className="box-wrapper">
             <Box className="social-media-wrapper">
@@ -48,32 +63,49 @@ const renderSocialMedia = () => {
             height="24px"
             src={call}
             tooltipObj={ABOUT.PHONE}
+            onClick={handlePhoneClick}
             />
             <SocialMedia
             height="40px"
             src={linkedin}
             tooltipObj={ABOUT.LINKEDIN}
+            onClick={handleLinkedInClick}
             />
             <SocialMedia
             height="36px"
             src={mail}
             tooltipObj={ABOUT.GMAIL}
+            onClick={handleMailClick}
             />
             <SocialMedia
             height="36px"
             src={twitter}
             tooltipObj={ABOUT.TWITTER}
+            onClick={handleTwitterClick}
             />
             <SocialMedia
             height="30px"
             src={github}
             tooltipObj={ABOUT.GITHUB}
+            onClick={handleGithubClick}
             />
         </Box>
     </Box>
     )
 }
 const Home = () => {
+
+     const handleMicrosoftClick = () => {
+        window.open("https://drive.google.com/file/d/1UMR4G_shf1FjHvvejIJuzS4wavKYvsuH/view?usp=sharing", "_blank");
+    }
+
+    const handleOracleClick = () => {
+        window.open("https://drive.google.com/file/d/1Vk02P7Cxt1c-sJw1RMBDCXnfKjKyUgsb/view?usp=sharing", "_blank");
+    }
+
+    const handleResume = () => {
+        window.open("https://drive.google.com/file/d/10F1oJ6p3vLtQgiwD6dy9PUJ7rC48TYhT/view?usp=sharing", "_blank");
+    }
 
     const renderPortfolioCard = () => {
         return (
@@ -85,7 +117,7 @@ const Home = () => {
                     </Box>
                 </Box>
 
-                <Box className="my-description">
+                <Box onClick={handleResume} className="my-description">
                     <Typography className="description-text">
                         {/* Name */}
                         Gyaneshwar Kumar
@@ -108,23 +140,11 @@ const Home = () => {
         )
     }
 
-    const handleMicrosoftClick = () => {
-        window.open("https://drive.google.com/file/d/1UMR4G_shf1FjHvvejIJuzS4wavKYvsuH/view?usp=sharing", "_blank");
-    }
-
-    const handleOracleClick = () => {
-        window.open("https://drive.google.com/file/d/1Vk02P7Cxt1c-sJw1RMBDCXnfKjKyUgsb/view?usp=sharing", "_blank");
-    }
-
-    const handleResume = () => {
-        window.open("https://drive.google.com/file/d/10F1oJ6p3vLtQgiwD6dy9PUJ7rC48TYhT/view?usp=sharing", "_blank");
-    }
-
     const renderCertification = () => {
         return (
             <Box className="box-wrapper certification-main-wrapper">
                 <Typography>Certifications</Typography>
-                <Box display="flex" gap="1rem" alignItems="center">
+                <Box width="100%" display="flex" justifyContent="space-evenly" gap="1rem" alignItems="center">
                     <Box onClick={handleMicrosoftClick} className="cursor" >
                         <img height="40px" src={microsoft}/>
                     </Box>
@@ -219,15 +239,16 @@ const Home = () => {
                         <DefaultMotion style={{width:"100%"}}>  
                             {renderCertification()}
                         </DefaultMotion>    
+                        <DefaultMotion style={{height:"100%"}}>
+                            {renderResumePoster()}
+                        </DefaultMotion>
                     </Box>
                     <DefaultMotion style={{height:"100%"}}>
                     {renderSkills()}
                     </DefaultMotion>
                 </Box>
                 <Box className="resume-box">
-                <DefaultMotion style={{height:"100%"}}>
-                    {renderResumePoster()}
-                </DefaultMotion>
+               
                 <DefaultMotion style={{height:"100%"}}>    
                     {renderExperiencePoster()}
                 </DefaultMotion>

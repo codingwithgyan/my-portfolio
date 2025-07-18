@@ -19,12 +19,12 @@ const Navbar = () => {
     return <Box className="navbar-main-container">
                 <Box>
                     {/* LOGO */}
-                    <Typography className="logo-main">Gya<span>n</span></Typography>
+                    <Box borderRadius="12px"><img height="40px" src="/logo.png"/></Box>
                 </Box>
                 <Box className="navbar-content-main-wrapper">
                     {/* Navbar links */}
-                    {NAVBAR_ITEM_LIST.map(item => {
-                        return <NavbarLink item={item}/>
+                    {NAVBAR_ITEM_LIST.map((item, index) => {
+                        return <NavbarLink key={index} item={item}/>
                     })}
                 </Box>
                 <Box>

@@ -43,7 +43,8 @@ export const ABOUT = {
     },
     GMAIL: {
         label: "Mail",
-        tooltip: "gyaneshwar.sde@gmail.com",
+        tooltip: "Mail",
+        link: "codewithgyan@gmail.com"
     },
     LINKEDIN: {
         label: "Linkedin",

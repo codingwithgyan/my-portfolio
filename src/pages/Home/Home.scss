@@ -15,6 +15,7 @@
     .home-container {
         display: flex;
         justify-content: space-evenly;
+        flex-wrap: wrap;
         gap:1rem;
         .portfolio-wrapper {
             height: 100%;
@@ -71,7 +72,7 @@
     }
         .social-media-wrapper {
             display: flex;
-            gap:12px;
+            gap:40px;
             align-items: center;
             justify-content: center;
             .icon {
@@ -105,11 +106,10 @@
     }
     .job-box {
         display: flex;
-        // flex-direction: column;
         gap: 1rem;
     }
     .resume-box {
-        width: 70%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         gap: 1rem;
@@ -119,6 +119,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        height: 100%;
         .mui-button-wrapper {
             border: 1px solid #9747ff;
         }
@@ -140,14 +141,14 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        // gap:1rem 4rem;
-        gap: 12px;
+        gap: 2rem 4rem;
         .dev-wrapper {
             width: 100%;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: space-evenly;
             flex-wrap: wrap;
+            gap: 2rem;
             .icon-wrapper {
                 border: 1px solid #3e3e3e;
                 border-radius: 6px;
@@ -167,7 +168,7 @@
     .experience-main-container {
         height: 100%;
         display: flex;
-        flex-direction: column;
+        justify-content: space-evenly;
         gap:1.5rem;
         text-align: center;
         padding: 24px 32px;
@@ -187,7 +188,7 @@
         cursor: pointer;
     }
 
-    @media only screen and (max-width: 1200px) {
+    @media only screen and (max-width: 700px) {
         .home-container {
             flex-wrap: wrap;
             .portfolio-wrapper {
