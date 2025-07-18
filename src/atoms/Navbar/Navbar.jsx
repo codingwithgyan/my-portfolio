@@ -13,6 +13,9 @@ const NavbarLink = ({item}) => {
 }
 
 const Navbar = () => {
+     const handleResume = () => {
+        window.open("https://drive.google.com/file/d/10F1oJ6p3vLtQgiwD6dy9PUJ7rC48TYhT/view?usp=sharing", "_blank");
+    }
     return <Box className="navbar-main-container">
                 <Box>
                     {/* LOGO */}
@@ -26,7 +29,7 @@ const Navbar = () => {
                 </Box>
                 <Box>
                     {/* Lets Talk */}
-                    <Box className="lets-talk-wrapper">
+                    <Box onClick={handleResume} className="lets-talk-wrapper">
                         <Box className="arrow-main-wrapper">
                             <Box className="inner-arrow-1">
                                 <img src={arrowIcon}/>

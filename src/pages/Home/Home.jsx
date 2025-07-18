@@ -1,5 +1,4 @@
 import { Box, Button, Tooltip, Typography } from "@mui/material";
-import Marquee from "react-fast-marquee";
 import { motion } from "motion/react";
 import Navbar from "../../atoms/Navbar/Navbar";
 import "./Home.scss";
@@ -109,15 +108,27 @@ const Home = () => {
         )
     }
 
+    const handleMicrosoftClick = () => {
+        window.open("https://drive.google.com/file/d/1UMR4G_shf1FjHvvejIJuzS4wavKYvsuH/view?usp=sharing", "_blank");
+    }
+
+    const handleOracleClick = () => {
+        window.open("https://drive.google.com/file/d/1Vk02P7Cxt1c-sJw1RMBDCXnfKjKyUgsb/view?usp=sharing", "_blank");
+    }
+
+    const handleResume = () => {
+        window.open("https://drive.google.com/file/d/10F1oJ6p3vLtQgiwD6dy9PUJ7rC48TYhT/view?usp=sharing", "_blank");
+    }
+
     const renderCertification = () => {
         return (
             <Box className="box-wrapper certification-main-wrapper">
                 <Typography>Certifications</Typography>
                 <Box display="flex" gap="1rem" alignItems="center">
-                    <Box className="cursor">
+                    <Box onClick={handleMicrosoftClick} className="cursor" >
                         <img height="40px" src={microsoft}/>
                     </Box>
-                    <Box className="cursor">
+                    <Box onClick={handleOracleClick} className="cursor">
                         <img height="40px" src={oracle}/>
                     </Box>
                 </Box>
@@ -131,7 +142,7 @@ const Home = () => {
             <Box className="box-wrapper resume-poster-main-wrapper">
                 <Button className="mui-button-wrapper">
                     <Box className="resume-button-wrapper">
-                        <Typography className="text-1">Resume</Typography>
+                        <Typography onClick={handleResume} className="text-1">Resume</Typography>
                         <Box height="22px">
                             <img height="22px" src={download}/>
                         </Box>
@@ -144,7 +155,6 @@ const Home = () => {
     const renderSkills = () => {
         return (
             <Box width="100%" className="box-wrapper skills-main-wrapper">
-                    <Marquee direction="left" speed="14">
                         <Box className="dev-wrapper">
                                 <IconWrapper src="/images/react.png"/>
                                 <IconWrapper src="/images/nextjs.png"/>
@@ -152,53 +162,24 @@ const Home = () => {
                                 <IconWrapper src="/images/nodejs.png"/>
                                 <IconWrapper src="/images/express.png"/>
                                 <IconWrapper src="/images/redux.png"/>
-                                <IconWrapper src="/images/aws.png"/>
-                                <IconWrapper src="/images/react.png"/>
-                                <IconWrapper src="/images/nextjs.png"/>
-                                <IconWrapper src="/images/typescript.png"/>
-                                <IconWrapper src="/images/nodejs.png"/>
-                                <IconWrapper src="/images/express.png"/>
-                                <IconWrapper src="/images/redux.png"/>
-                                <IconWrapper src="/images/aws.png"/>
                         </Box>
-                    </Marquee>
-                    <Marquee direction="right" speed="14">
                         <Box className="dev-wrapper">
                                 <IconWrapper src="/images/storybook.png"/>
                                 <IconWrapper src="/images/scss.png"/>
                                 <IconWrapper src="/images/tailwind.png"/>
                                 <IconWrapper src="/images/mui.png"/>
-                                <IconWrapper src="/images/notion.png"/>
-                                <IconWrapper src="/images/photoshop.png"/>
-                                <IconWrapper src="/images/figma.png"/>
-                                <IconWrapper src="/images/storybook.png"/>
-                                <IconWrapper src="/images/scss.png"/>
-                                <IconWrapper src="/images/tailwind.png"/>
-                                <IconWrapper src="/images/mui.png"/>
-                                <IconWrapper src="/images/notion.png"/>
                                 <IconWrapper src="/images/photoshop.png"/>
                                 <IconWrapper src="/images/figma.png"/>
                         </Box>
-                    </Marquee>
 
-                    <Marquee direction="left" speed="14">
                         <Box className="dev-wrapper">
                                 <IconWrapper src="/images/trello.png"/>
                                 <IconWrapper src="/images/github.png"/>
-                                <IconWrapper src="/images/figma.png"/>
-                                <IconWrapper src="/images/vscode.png"/>
-                                <IconWrapper src="/images/sql.png"/>
-                                <IconWrapper src="/images/mongodb.png"/>
-                                <IconWrapper src="/images/notion.png"/>
-                                <IconWrapper src="/images/trello.png"/>
-                                <IconWrapper src="/images/github.png"/>
-                                <IconWrapper src="/images/figma.png"/>
                                 <IconWrapper src="/images/vscode.png"/>
                                 <IconWrapper src="/images/sql.png"/>
                                 <IconWrapper src="/images/mongodb.png"/>
                                 <IconWrapper src="/images/notion.png"/>
                         </Box>
-                    </Marquee>
 
 
             </Box>
@@ -232,10 +213,10 @@ const Home = () => {
                 </Box>
                 <Box width="100%" display="flex" flexDirection="column" gap="1rem">
                     <Box width="100%" className="job-box">
-                        <DefaultMotion >
+                        <DefaultMotion>
                             {renderJobTitle()}
                         </DefaultMotion>  
-                        <DefaultMotion >  
+                        <DefaultMotion style={{width:"100%"}}>  
                             {renderCertification()}
                         </DefaultMotion>    
                     </Box>

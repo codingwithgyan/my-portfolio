@@ -18,7 +18,8 @@
         gap:1rem;
         .portfolio-wrapper {
             height: 100%;
-            width: 380px;
+            min-width: 380px;
+            max-width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -134,25 +135,30 @@
 
     .skills-main-wrapper {
         height: 100%;
-        padding: 42px 6px;
+        padding: 32px 22px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        gap:1rem 4rem;
+        // gap:1rem 4rem;
+        gap: 12px;
         .dev-wrapper {
+            width: 100%;
             display: flex;
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
             .icon-wrapper {
-                border: 1px solid #414141;
+                border: 1px solid #3e3e3e;
                 border-radius: 6px;
                 padding: 3px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                margin-left: 52px;
+            }
+            .icon-wrapper:hover {
+                transform: scale(1.2);
+                transition: all .2s ease-in-out;
             }
         }
 
