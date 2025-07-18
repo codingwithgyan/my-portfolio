@@ -243,9 +243,9 @@ const Home = () => {
                             {renderResumePoster()}
                         </DefaultMotion>
                     </Box>
-                    <DefaultMotion style={{height:"100%"}}>
+                    {/* <DefaultMotion style={{height:"100%"}}>
                     {renderSkills()}
-                    </DefaultMotion>
+                    </DefaultMotion> */}
                 </Box>
                 <Box className="resume-box">
                
