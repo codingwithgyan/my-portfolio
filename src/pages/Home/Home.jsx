@@ -172,40 +172,6 @@ const Home = () => {
         )
     }
 
-    const renderSkills = () => {
-        return (
-            <Box width="100%" className="box-wrapper skills-main-wrapper">
-                        <Box className="dev-wrapper">
-                                <IconWrapper src="/images/react.png"/>
-                                <IconWrapper src="/images/nextjs.png"/>
-                                <IconWrapper src="/images/typescript.png"/>
-                                <IconWrapper src="/images/nodejs.png"/>
-                                <IconWrapper src="/images/express.png"/>
-                                <IconWrapper src="/images/redux.png"/>
-                        </Box>
-                        <Box className="dev-wrapper">
-                                <IconWrapper src="/images/storybook.png"/>
-                                <IconWrapper src="/images/scss.png"/>
-                                <IconWrapper src="/images/tailwind.png"/>
-                                <IconWrapper src="/images/mui.png"/>
-                                <IconWrapper src="/images/photoshop.png"/>
-                                <IconWrapper src="/images/figma.png"/>
-                        </Box>
-
-                        <Box className="dev-wrapper">
-                                <IconWrapper src="/images/trello.png"/>
-                                <IconWrapper src="/images/github.png"/>
-                                <IconWrapper src="/images/vscode.png"/>
-                                <IconWrapper src="/images/sql.png"/>
-                                <IconWrapper src="/images/mongodb.png"/>
-                                <IconWrapper src="/images/notion.png"/>
-                        </Box>
-
-
-            </Box>
-        )
-    }
-
     const renderExperiencePoster = () => {
         return (
             <Box className="box-wrapper experience-main-container">
@@ -243,9 +209,6 @@ const Home = () => {
                             {renderResumePoster()}
                         </DefaultMotion>
                     </Box>
-                    {/* <DefaultMotion style={{height:"100%"}}>
-                    {renderSkills()}
-                    </DefaultMotion> */}
                 </Box>
                 <Box className="resume-box">
                
