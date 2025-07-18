@@ -6,6 +6,7 @@ import AnimatedCursor from 'react-animated-cursor';
 import About from './pages/About/About';
 import Skills from './pages/Skills/Skills';
 import WorkExperience from './pages/WorkExperience/WorkExperience';
+import Projects from './pages/Projects/Projects';
 
 const theme = createTheme({
   typography: {
@@ -24,6 +25,7 @@ function App() {
         <About/>
         <Skills/>
         <WorkExperience/>
+        <Projects/>
     </ThemeProvider>
     </div>
   )
