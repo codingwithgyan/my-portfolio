@@ -6,6 +6,7 @@ import StepLabel from '@mui/material/StepLabel';
 import StepContent from '@mui/material/StepContent';
 import './WorkExperience.scss';
 import { WORK_EXPERIENCE } from '../constants';
+import { DefaultMotion } from '../../atoms/Motion/CustomMotion';
 
 function InterviewVectorStepIcon(props) {
   return (
@@ -18,6 +19,7 @@ function InterviewVectorStepIcon(props) {
 
 const WorkExperience = () => {
   return (
+    <DefaultMotion>
     <Box className="work-experience-main-container">
       <Box className="box-wrapper experience-wrapper">
         <Typography className="header-text">Experience</Typography>
@@ -65,6 +67,7 @@ const WorkExperience = () => {
         </Box>
       </Box>
     </Box>  
+    </DefaultMotion>
   )
 };
 
